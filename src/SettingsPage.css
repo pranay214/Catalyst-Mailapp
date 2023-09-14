@@ -1,0 +1,368 @@
+.settings-page {
+    display: flex;
+    flex-direction: column; /* New: Changes layout to column */
+    width: 100%;
+    height: 100vh; /* New: Takes up full viewport height */
+    padding: 0;
+    margin: 0;  
+}
+
+.settings-header {
+    display: flex;
+    justify-content: flex-end; /* Added to align content to the right */
+    padding: 0; /* Updated */
+    margin: 0; /* Updated */
+    background-color: transparent;
+    position: absolute; /* Updated from relative to absolute */
+    top: 0; /* Added to ensure it stays on top */
+    right: 0; /* Added to ensure it stays on the right */
+    z-index: 1;
+    width: 100%; /* Updated to 100% to stretch across the parent width */
+}
+.orig-header {
+    width: 100%;
+    height: 70px; /* New: Adjust this to set the height of the header */
+}
+
+.user-avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* New: Makes this element take up remaining space */
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #171717;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    transition: none; /* Remove the margin transition */
+    flex-grow: 1; /* Allow it to take up remaining space */
+}
+
+.settings-return-link {
+    display: block;
+    margin-top: 20px;
+    color: rgb(214, 214, 214);
+}
+.settings-content .client-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 0px;
+    height: 70%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 50vh;
+    background: rgb(54,54,54);
+    background: linear-gradient(0deg, rgba(54,54,54,1) 0%, rgba(29,29,29,1) 68%);
+    border: 1px solid #444; /* Add thin border */
+
+}
+
+.settings-content .client-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin-right: 20px;
+    color: rgb(214, 214, 214);
+    margin-top: 2%; /* Reduce the top margin to reduce the gap between inputs */
+    margin-bottom: 5px;
+}
+.settings-content .client-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    width: 100%;
+}
+
+.form-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.settings-content .client-form button {
+    padding: 10px 20px;
+    background-color: #1e6091;
+    color: white;
+    border: none;
+    border-radius: 10px; /* Increase border radius to make the button rounder */
+    border: 1px solid rgba(30,96,145,1);
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    min-width: 85px;
+    max-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Add text shadow for better contrast */
+}
+
+.settings-content .client-form button:hover {
+    background-color: white;
+    transition: all 0.2s ease-out;
+    color: #1e6091;
+    transform: scale(1.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+@media (max-width: 600px){
+    .settings-content{
+        align-items: center;
+      justify-content: center;
+    }
+    .settings-content .client-form{
+        margin-left: 0;
+        width: 80%;
+        height: 55%;
+    }
+    .settings-return-link{
+        margin-left: 0;
+    }
+}
+.settings-content .client-form h2 {
+    text-align: left;
+    color: rgb(214, 214, 214);
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.settings-content .client-form separator {
+    width: 100%;
+    height: 1px;
+    background-color: #a0a0a0;
+    margin-bottom: 0;
+}
+.info-icon-container,
+.info-icon-container2,
+.info-icon-container3 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 105px;
+    vertical-align: middle;  /* Align with the label text */
+    width: fit-content;
+    margin-top: -18px;
+    margin-bottom: 10px;
+}
+.info-icon-container2{
+    margin-left: 97px;
+}
+.info-icon-container3{
+    margin-left: 102px;
+}
+.info-icon {
+    width: 12px;
+    height: 12px;
+    color: #777;
+    border-radius: 50%;
+    border: 1px solid #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    top: -35px; /* Positioned above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.info-icon-container:hover .tooltip,
+.info-icon-container2:hover .tooltip,
+.info-icon-container3:hover .tooltip {
+    display: block;
+}
+.settings-content .client-form input,
+.settings-content .client-form .custom-select {
+    box-sizing: border-box; /* Ensure padding and border are included in the total width */
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    width: 100%; /* Ensuring width is explicitly set to 100% */
+    margin: 0; /* Removing any default margins */
+}
+
+.settings-content .client-form .custom-select {
+    appearance: none;  /* Removes default browser styling */
+    position: relative;
+    opacity: 85%;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Hide the native arrow of the select */
+    padding-right: 30px; /* Adding extra padding to accommodate the custom arrow without overlapping text */
+    background-color: #171717; /* Specifying the background color */
+    color: rgb(139, 135, 135); /* Specifying the text color */
+}
+
+/* Arrow for the dropdown */
+.settings-content .client-form .custom-select::after {
+    content: '\25BC';  /* Adds a down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensures clicks on the arrow are treated as clicks on the select element itself */
+    color: rgb(214, 214, 214); /* Match arrow color to the text color */
+    content: '';
+}
+@media screen and (max-width: 625px){
+    .tooltip {
+        width: 200px;
+        white-space: normal;
+        word-wrap: break-word;
+        padding: 5px 10px;
+        font-size: 10px;
+        top: -50px; /* Position the tooltip higher due to increased height */
+    }
+    .client-form{
+        min-height: 80%;
+    }
+}
+.nav-toggles {
+    display: none; /* Hidden by default on larger screens */
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute; /* Position it absolutely */
+    top: 71px; /* Adjust as needed */
+    left: 0;
+    z-index: 10; /* Ensure it's on top */
+}
+
+.nav-panels {
+    position: fixed; /* Fixed positioning */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height */
+    width: 80%; /* Adjust width as needed, 80% for demonstration */
+    max-width: 200px; /* Maximum width it can take */
+    background: rgb(54,54,54);
+    background: linear-gradient(0deg, rgba(54,54,54,1) 0%, rgba(29,29,29,1) 68%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease; /* Smooth slide-in effect */
+    z-index: 9999;
+    margin-top: 70px;
+    flex-shrink: 0; /* Prevent it from shrinking */
+    transform: none; /* Remove the transform */
+    color: rgb(214, 214, 214);
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav-panels button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.3s ease;
+    text-align: left;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 14px;
+}
+.nav-panels button:hover {
+    background-color: #555;
+}
+
+.nav-panels button:focus {
+    outline: none;
+}
+.nav-panels svg{
+    margin-right: 10px;
+}
+
+.nav-panels.show {
+    transform: translateX(0); /* Slide in when shown */
+}
+
+.nav-panels a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-panels a:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-toggles {
+        display: block; /* Show the toggle button on mobile screens */
+    }
+    .nav-panels {
+        position: absolute; /* Position it absolutely on mobile */
+        width: 100%; /* Take full width on mobile screens */
+        transform: translateX(-100%); /* Initially hidden off the screen */
+        margin-top: 0;
+    }
+    .nav-panels.show {
+        transform: translateX(0); /* Slide in when shown */
+    }
+    .settings-content {
+        margin-left: 0; /* Reset margin on mobile screens */
+        overflow: hidden;
+    }
+}
+.nav-panels.show + .settings-content {
+    margin-left: calc(80% + 20px); /* Adjust according to the width of the nav panel + some padding */
+}
+.content-wrappers {
+    display: flex; /* Use Flexbox to layout children */
+    flex-grow: 1; /* Allow it to take up remaining space */
+    overflow-x: hidden; /* Hide any overflow */
+}

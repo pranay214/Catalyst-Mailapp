@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+html,body {
+  font-family: 'MartianMono', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  letter-spacing: -1px;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 10px;
+}
+@media (max-width: 800px) {
+  html, body {
+  overflow-x: hidden;
+  }
+}
+.nav-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+}
+
+.nav-link:visited {
+  color: inherit; /* Ensure color stays the same even after the link is visited */
+}
+nav{
+  display: flex; /* Display the navigation list items horizontally */
+  justify-content: flex-end;
+  right: 0;
+  top: 0;
+  position: absolute;
+  z-index: 1000; /* add this line */
+  color: aliceblue;
+  margin-right: 3.5%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Display the list items horizontally */
+}
+
+li {
+  margin-left: 20px; /* Add some space between list items */
+  cursor: pointer;
+}
+
+/* Hover animation */
+li:hover {
+  font-weight: bold;
+}
+.nav-shifted ul li {
+  margin-left: 20px; /* Increase space between list items */
+}
+
+.nav-shifted {
+  justify-content: flex-start; /* Align items to the start */
+  margin-right: 10%;
+}
+header {
+  position: relative;
+}
+@media (max-width: 600px) {
+  .nav-shifted {
+    margin-right: 25%;
+  }
+}
+@media (min-width: 600px) {
+  .nav-shifted {
+    margin-right: 6%;
+  }
+}
+

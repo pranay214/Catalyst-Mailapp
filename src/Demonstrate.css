@@ -1,0 +1,58 @@
+.macbook-container{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+   
+}
+.macbook-container img{
+    width: 450px;
+    height: 290px;
+    left: 0;
+    top: 0;
+    padding: 0;
+    z-index: 0;
+}
+.Message-contain{
+    width: fit-content;
+    display: flex;
+    margin-left: -50%;
+    margin-top: 4.8%;
+    
+}
+.Message-contain img{
+    width: 290px;
+    height: 190px;
+    object-fit: cover;
+    opacity: 0;
+  animation: imageTransition 6s linear infinite 0s;
+  
+}
+.Message-contain img:nth-child(2){
+    width: 290px;
+    height: 190px;
+    margin-left: -50%;
+    margin-top: -3.7%;
+   
+}
+.Message-contain img:nth-child(1){
+    height: 190px;
+    margin-left: 25%;
+    margin-top: -3.5%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+.Message-contain img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.Message-contain img:nth-child(2) {
+    animation-delay: 3s; /* Delay the start of the second image's animation by 10 seconds */
+}
+
+@keyframes imageTransition {
+    0%, 62.5% {
+        opacity: 0;
+    }
+    12.5%, 50% {
+        opacity: 1;
+    }
+}

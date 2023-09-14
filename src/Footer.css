@@ -1,0 +1,61 @@
+.footer {
+    background: rgb(0,17,31);
+    background: linear-gradient(0deg, rgba(0,17,31,1) 60%, rgba(0,0,0,1) 100%);
+    color: rgb(214, 214, 214);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    font-size: 13px;
+    opacity: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .footer-content {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Take the full width of the footer */
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center; /* Center the links */
+    margin-left: auto; /* Pushes the links to the right */
+  }
+  .footer-brand {
+    white-space: nowrap; /* Prevents the text from breaking into multiple lines */
+    margin-right: auto;/* Add some space from the left edge */
+  }
+  
+  .footer-links a {
+    color: rgb(214, 214, 214);
+    margin: 0 5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer-links a:hover {
+    color: #0086f3; /* Gold color for hover effect */
+  }
+  @media (max-width: 450px) {
+    .footer-links a {
+      font-size: 10px;
+    }
+  }
+  @media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack children vertically */
+    }
+    
+    .footer-content {
+        flex-direction: column; /* Stack children vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+    
+    .footer-links {
+        margin-left: 0;
+        margin-top: 10px; /* Add some vertical space between brand and links */
+    }
+
+    .footer-brand {
+        margin-right: 0;
+        margin-bottom: 10px; /* Add some vertical space between brand and links */
+    }
+}

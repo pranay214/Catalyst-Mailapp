@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'MartianMono';
+    src: url('../martian-mono.ttf') format('truetype');
+    font-family: 'Gloock';
+    src: url('./fonts/Gloock-Regular.ttf') format('truetype');
+
+  }

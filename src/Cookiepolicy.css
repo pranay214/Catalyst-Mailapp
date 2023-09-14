@@ -1,0 +1,42 @@
+.cookie-card{
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 800px;
+    width: 90%;
+    color: rgb(214, 214, 214);
+    font-family: 'Gloock', sans-serif;
+    line-height: 1.6;
+    margin-top: 20px;
+    background: rgb(54,54,54);
+    background: linear-gradient(0deg, rgba(54,54,54,1) 0%, rgba(29,29,29,1) 68%);
+  }
+
+  .cookie-card h1 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid aliceblue;
+    padding-bottom: 10px;
+  }
+  .cookie-card h2 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  .cookie-card h3 {
+    font-size: 17px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .cookie-card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  .cookie-background {
+    background-color: #171717;
+    min-height: 100vh;  /* This ensures the background color covers the full viewport height */
+  }

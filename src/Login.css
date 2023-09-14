@@ -1,0 +1,148 @@
+.Login {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gloock', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+.animated-background-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.login-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    z-index: 1;
+    
+}
+
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.login-container button {
+    width: 70%;
+    padding: 10px;
+    margin: 10px auto;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+}
+
+.login-container h2{
+    color: aliceblue;
+    margin-left: 7.5vh;
+    margin-bottom: 1vh;
+}
+
+.login-button {
+    background: #808080;
+}
+
+.google-login-button {
+    background: #db4437;
+}
+
+.fb-login-button {
+    background: #3b5998;
+}
+
+.login-container button:hover {
+    transform: scale(1.05);
+}
+
+.icon-placeholder {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: white;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.login-container a {
+    color: #3b5998;
+    text-decoration: none;
+}
+.login-container p{
+    color: aliceblue;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.catalyst_new {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+  .google-login-button img{
+    max-width: 20px;
+    background-color: #db4437;
+  }
+  .fb-login-button img{
+    max-width: 20px;
+    background-color: transparent;
+  }
+  #g_id_onload {
+    /* You can adjust these values as needed */
+    width: 100%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .g_id_signin {
+    /* You can adjust these values as needed */
+    width: 100%;
+    padding: 10px;
+    background-color: #4285f4; /* This is Google's blue color */
+    color: #fff;
+    text-align: center; /* This will center the text inside the div */
+    border-radius: 20px; /* This will make the div look like a pill */
+  }
+  
+  /* This is for the 'filled_blue' theme */
+  .g_id_signin[data-theme='filled_blue'] {
+    background-color: #4285f4; /* This is Google's blue color */
+    color: #fff;
+  }
+  
+  /* This is for the 'medium' size */
+  .g_id_signin[data-size='medium'] {
+    padding: 15px;
+  }
+  
+  /* This is for the 'left' logo alignment */
+  .g_id_signin[data-logo_alignment='left'] {
+    display: flex; /* This enables flexbox layout */
+    justify-content: flex-start; /* This aligns items to the start of the flex container */
+  }
+  .google-login{
+    margin-left: 10px;
+  }

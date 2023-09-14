@@ -1,0 +1,100 @@
+.header {
+    background-color: transparent;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Align items horizontally with space between them */
+    align-items: center; /* Align items vertically at the center */
+    margin-bottom: 0;
+    height: 90px; /* adjust as needed */
+    margin-top: -20px;
+    position: relative; 
+    z-index: 1;
+    width: 100%;
+}
+.Header-wrap{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+nav {
+  display: flex; /* Display the navigation list items horizontally */
+  justify-content: flex-end;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Display the list items horizontally */
+}
+
+li {
+  margin-left: 20px; /* Add some space between list items */
+  cursor: pointer;
+}
+
+/* Hover animation */
+li:hover {
+  font-weight: bold;
+}
+  @keyframes flickerAnimation {
+    0%, 100% {
+      opacity: 1; /* Fully visible */
+      filter: brightness(100%); /* Normal brightness */
+    }
+    25%, 75% {
+      opacity: 0.8; /* Less visible (flickering) */
+      filter: brightness(150%); /* Slightly brighter */
+    }
+    50% {
+      opacity: 0.6; /* Even less visible (flickering) */
+      filter: brightness(200%); /* Brighter */
+    }
+  }
+  
+  /* Apply the flickering animation when the "flicker" class is present */
+  .flicker {
+    animation: flickerAnimation 0.2s infinite alternate;
+  }
+  
+  /* Hide the text when it's not flickering (opacity set to 0) */
+  .hidden {
+    opacity: 0;
+    pointer-events: none; /* Disable pointer events when hidden */
+  }
+  .catalyst-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    padding: 10px;
+    font-family: 'Gloock', sans-serif;
+  }
+  @media screen and (min-width: 2559px) and (max-width: 2560px){
+    .header{
+      font-size: 32px;
+    }
+    .catalyst-text{
+      font-size: 32px;
+    }
+    nav{
+      margin-right: 50px;
+    }
+  }
+  @media screen and (min-width: 300px) and (max-width: 500px){
+    nav{
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    li {
+      margin-left: 10px; /* Add some space between list items */
+      cursor: pointer;
+    }
+  }
+  

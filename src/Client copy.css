@@ -1,0 +1,376 @@
+
+.panelone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Gloock', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.main-content1 {
+    margin: 40px 0;
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    width: 50%;
+    transition: all 0.2s ease-out;
+}
+.main-content1:hover {
+    transform: scale(1.02); /* Slightly scale up the button on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.client-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px;  
+}
+
+
+.client-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    flex-basis: calc(50% - 10px); 
+    margin-bottom: 10px;
+    margin-right: 20px; /* Add a right margin */
+    letter-spacing: 0.1px;
+}
+.client-form label:nth-child(2n) {
+    margin-right: 0; /* Removes right margin for every second label */
+}
+.client-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    width: 100%;
+}
+
+.client-form input[type="file"] {
+    grid-column: span 2;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: span 2;
+    margin-top: 20px;
+}
+
+
+
+.button-group button {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgba(30,96,145,1);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: black;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  
+  .button-group button:hover {
+    background: rgba(30,96,145,1);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    color: aliceblue;
+    
+  }
+  
+  .button-group button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+    
+  }
+  
+  .button-group button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  .button-group button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+    
+  }
+  
+
+
+@media (max-width: 600px) {
+    .panelone {
+        min-height: calc(100vh - 80px);
+        padding: 5px;
+    }
+    .main-content1 {
+        margin: 10px 0;
+        padding: 10px;
+        width: 100%; /* This will make the main-content1 take full width on small screens */
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+    }
+    .client-form {
+        grid-template-columns: 1fr; /* Change to one column layout */
+        gap: 10px;
+        display: block;
+        width: fit-content;
+    }
+    .client-form label {
+        font-size: 12px;
+        flex-basis: 100%; /* Set width to 100% on small screens */
+        margin-right: 0; /* Removes right margin for labels on small screens */
+        letter-spacing: 0.1px;
+    }
+    .client-form input {
+        font-size: 12px;
+        padding: 10px 5px; /* Reduced padding */
+    }
+    .client-form input[type="file"] {
+        grid-column: span 1; /* Makes the file input span one column on small screens */
+    }
+    .button-group {
+        flex-direction: column;
+    }
+    .button-group button {
+        margin-bottom: 10px;
+    }
+    .footer-client {
+        font-size: 10px;
+    }
+}
+.panel-container {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adding shadow for depth perception */
+    transition: all 0.3s ease-out; /* Smooth transition for hover effect */
+    width: 100%;
+    display: flex;
+    height: 100%;
+    display: contents;
+}
+
+.panel-container:hover {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4); /* Darken the shadow on hover */
+}
+
+.client {
+    display: grid; /* Changes the display to grid */
+    grid-template-rows: auto 1fr; /* Divides the layout into two rows: one for the header, and another that fills the rest of the space */
+    height: 100%; /* Fill the height of the screen */
+}
+.nav-panel {
+    flex: 0 0 250px; /* adjust 250px to fit your nav-panel width */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch; /* Make the buttons stretch to fill the width of the container */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust color as needed */
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Adding shadow for depth perception */
+    transition: all 0.2s ease-out;
+    grid-column: 1;
+    width: 250px;
+    position: absolute;
+}
+.nav-panel.open {
+  left: 0;
+}
+.nav-panel:hover {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4); /* Darken the shadow on hover */
+}
+
+.nav-panel button {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 0; /* Add some vertical margin between buttons */
+    border-radius: 25px; 
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Make the buttons fill the width of the container */
+}
+
+.nav-panel button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.02); /* Slightly scale up the button on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.main-content {
+    flex-grow: 1;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Adding shadow for depth perception */
+    overflow-y: auto; /* Add scroll if content is larger than the height of the viewport */
+    grid-column: 2;
+    height: 100%;
+}
+.page-container {
+    display: grid; /* We'll use CSS grid for layout */
+    grid-template-columns: 250px 1fr; /* 250px for the sidebar and the rest of the space for main content */
+    height: 100%; /* This makes sure .page-container takes up the rest of the space below the header */
+    width: 100%; /* Ensures the .page-container takes up full width */
+    height: calc(100vh - 50px);
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; /* Reduced from 80% to 60% */
+    max-height: 70%; /* Reduced from 80% to 70% */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    animation: popup .25s ease-out; /* Added animation */
+    font-family: Arial, sans-serif; /* Change as per your preference */
+  }
+  
+  /* Define the popup animation */
+  @keyframes popup {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -30%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  .popup button {
+    display: inline-block; /* Changed from block to inline-block */
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(30,96,145,1);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: black;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    margin: 0 5px;
+  }
+  
+  .popup button:hover {
+    background: rgba(30,96,145,1);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    color: aliceblue; /* Darker shade for hover */
+  }
+  
+  .popup p {
+    white-space: pre-wrap;
+    padding: 20px;
+    border: 1px solid #ddd; /* Added border */
+    border-radius: 14px; /* Added border-radius */
+    background: #f9f9f9; /* Added background */
+    text-align: left;
+    letter-spacing: 0.1px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    }
+
+  .popup button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+    
+  }
+  
+  .popup button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    
+  }
+  .popup button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+    
+  }
+
+ 
+  
+ 
