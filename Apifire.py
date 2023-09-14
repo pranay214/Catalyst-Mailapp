@@ -47,9 +47,6 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
 from itsdangerous import URLSafeTimedSerializer
 
-openai.organization = "org-bsp3qZkltqm8iP2cdt0uypsI"
-openai.api_key = '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'
-
 def prompt(X):
     response = openai.ChatCompletion.create(
       model="gpt-3.5-turbo",
